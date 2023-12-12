@@ -1,0 +1,74 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.bg_danger2 {
+    background-color: #F66;
+}
+#gradient2 {
+    background-image: linear-gradient(90deg, #0B4499 0.01%, #0059AB 0.02%, rgba(71, 111, 172, 0.81) 50.52%, rgba(68, 109, 171, 0.72) 59.9%, rgba(0, 7, 17, 0.29) 100%);
+}
+.badge_custom {
+    padding: 5px 10px;
+    font-weight: bold;
+    display: inline-block;
+    font-size: 15px;
+    width: 110px;
+    height: 30px;
+}
+
+.badge_custom.tersedia {
+    background-color: #72FF66;
+}
+
+.badge_custom.tidak_tersedia {
+    width: 130px;
+    background-color: #F66;
+}
+
+.badge_custom-sm {
+    padding: 0px 10px;
+    font-weight: bold;
+    display: inline-block;
+    font-size: 12px;
+}
+
+.badge_custom-sm.tidak_tersedia {
+    background-color: #F66;
+}
+
+.badge_custom-sm.tersedia {
+    background-color: #72FF66;
+}
+
+th.header-table {
+    background-color: #4285f4;
+    color: white;
+    font-weight: bold
+}
+
+.alert-message-custom {
+    font-size : 20px;
+}
+
+.dataTables_filter input {
+    border: solid 1px #CCC !important;
+    border-radius: 10em !important;
+    height: 25px !important;
+    margin-top: 6px !important;
+}
