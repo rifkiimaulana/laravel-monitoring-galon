@@ -33,7 +33,7 @@
             </div>
         </div>
     </div>
-@endsection
+@endsection     
 <script>
     $(function () {
         function updateView(sortedData) {

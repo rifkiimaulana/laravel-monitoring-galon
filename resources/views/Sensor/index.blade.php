@@ -3,7 +3,7 @@
     @section('content')
         <div>
             <div class="md-form input-group mb-4" style="margin-top: 0px; margin-bottom: 15px !important;">
-                <a class="btn btn-primary rounded-pill waves-effect waves-light" href="/Dispenser/create" style="padding: 10px 30px;">
+                <a class="btn btn-primary rounded-pill waves-effect waves-light" href="/Sensor/create" style="padding: 10px 30px;">
                     <i class="fas fa-plus"></i>
                 </a>
                 <input name="ctl00$MainContent$txtCari" type="text" id="MainContent_txtCari" class="form-control form-cari" placeholder="Cari" />
@@ -20,25 +20,21 @@
                 <thead>
                     <tr>
                         <th class="text-center" scope="col" style="background-color: #4285f4; color:white; font-weight:bold">No</th>
-                        <th class="text-center" scope="col" style="background-color: #4285f4; color:white; font-weight:bold">ID Dispenser</th>
-                        <th class="text-center" scope="col" style="background-color: #4285f4; color:white; font-weight:bold">No Dispenser</th>
-                        <th class="text-center" scope="col" style="background-color: #4285f4; color:white; font-weight:bold">Akses</th>
-                        <th class="text-center" scope="col" style="background-color: #4285f4; color:white; font-weight:bold">Ketersedian</th>
-                        <th class="text-center" scope="col" style="background-color: #4285f4; color:white; font-weight:bold">Lantai</th>
-                        <th class="text-center" scope="col" style="background-color: #4285f4; color:white; font-weight:bold">Lokasi</th>
+                        <th class="text-center" scope="col" style="background-color: #4285f4; color:white; font-weight:bold">ID Sensor</th>
+                        <th class="text-center" scope="col" style="background-color: #4285f4; color:white; font-weight:bold">Nama Sensor</th>
+                        <th class="text-center" scope="col" style="background-color: #4285f4; color:white; font-weight:bold">Status Pemakaian</th>
+                        <th class="text-center" scope="col" style="background-color: #4285f4; color:white; font-weight:bold">Status</th>
                         <th class="text-center" scope="col" style="background-color: #4285f4; color:white; font-weight:bold">Aksi</th>
                     </tr>
                 </thead>
                 <tbody>
-                    @forelse ($data_dispenser as $dispenser)
+                    @forelse ($data_sensor as $sensor)
                         <tr>
                             <td>{{ $loop->index + 1 }}</td>
-                            <td>{{ $dispenser->dis_id }}</td>
-                            <td>{{ $dispenser->dis_no_dispenser }}</td>
-                            <td>{{ $dispenser->dis_access }}</td>
-                            <td>{{ $dispenser->dis_ketersediaan }}</td>
-                            <td>{{ $dispenser->dis_lantai }}</td>
-                            <td>{{ $dispenser->dis_lokasi }}</td>
+                            <td>{{ $sensor->sen_id }}</td>
+                            <td>{{ $sensor->sen_nama }}</td>
+                            <td>{{ $sensor->sen_status_pemakaian }}</td>
+                            <td>{{ $sensor->sen_status}}</td>
                             <td class="text-center">
                                 <div class="dropdown">
                                     <a data-bs-toggle="dropdown" aria-expanded="false">
@@ -46,12 +42,12 @@
                                     </a>
                                     <ul class="dropdown-menu">
                                         <li>
-                                            <a class="dropdown-item" href="{{ route('Dispenser.edit', ['dis_id' => $dispenser->dis_id]) }}">
+                                            <a class="dropdown-item" href="{{ route('Sensor.edit', ['sen_id' => $sensor->sen_id]) }}">
                                                 <i class="fa-solid fa-pen-to-square" style="margin-right:7px"></i>Edit
                                             </a>
                                         </li>
                                         <li>
-                                        <form method="POST" action="{{ route('Dispenser.delete', ['dis_id' => $dispenser->dis_id]) }}">
+                                        <form method="POST" action="{{ route('Sensor.delete', ['sen_id' => $sensor->sen_id]) }}">
                                             @csrf
                                             @method('delete')
                                             <button type="submit" class="dropdown-item">

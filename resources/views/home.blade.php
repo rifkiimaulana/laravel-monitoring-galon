@@ -149,11 +149,17 @@
                             <a href="{{route('Monitoring')}}" style="color:black">
                                 <li class='list-group-item border border-0 active' style='cursor: pointer;'><b><i class="fa-solid fa-gauge" style="margin-right: 7px;"></i>Monitoring</b></li>
                             </a>
+                            <a href="{{route('Sensor')}}" style="color:black">
+                                <li class='list-group-item border border-0' style='cursor: pointer;'><b><i class="fa-solid fa-bottle-water" style='margin-right: 7px;'></i>Sensor</b></li>
+                            </a>
                             <a href="{{route('Dispenser')}}"  style="color:black">
                                 <li class='list-group-item border border-0' style='cursor: pointer;'><b><i class="fa-solid fa-glass-water-droplet" style='margin-right: 7px;'></i>Kelola Dispenser</b></li></a>
                             <a href="{{route('InventarisGalon')}}" style="color:black">
                                 <li class='list-group-item border border-0' style='cursor: pointer;'><b><i class="fa-solid fa-bottle-water" style='margin-right: 7px;'></i>Kelola Galon</b></li>
-                            </a>
+                            </a> 
+                            <a href="{{route('PendaftaranDevice')}}" style="color:black">
+                                <li class='list-group-item border border-0' style='cursor: pointer;'><b><i class="fa-solid fa-bottle-water" style='margin-right: 7px;'></i>Pendaftaran Device</b></li>
+                            </a> 
                         </div>
                         <li class='list-group-item border border-0 hovermenu' style='cursor: pointer;' onclick="window.location.href='http://localhost/web_intra//Page_Redirect_SSO.aspx';"><i class='fas fa-external-link-alt' style='margin-right: 7px;'></i><b>Halaman SSO</b></li>
                     </ul>
@@ -169,7 +175,7 @@
                                 Sistem Monitoring Dispenser
                             </b>
                         </li>
-                        <li class="breadcrumb-item active"><b>@ViewData["Page"]</b></li>
+                        <li class="breadcrumb-item active"><b>@ViewData["@"]</b></li>
                     </ol>
                 </nav>
                 <hr style="margin-top: .8em; border:0.1px;" />

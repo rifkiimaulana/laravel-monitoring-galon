@@ -23,13 +23,14 @@
         </h5>
     </div>
     <div class="card-body">
-        <form method="post" asp-controller="Dispenser" asp-action="Create">
+        <form method="POST" action="{{route('Dispenser.store')}}">
+            @csrf
             <div class="row">
-                <input asp-for="dis_id" value="XXXX" type="hidden"/>
+                <input asp-for="dis_id" value="DSP001x  " type="hidden"/>
                 <div class="col-lg-4 form-group">
-                    <label style="font-weight: bold;" for="addSender">ID Mikrocontroller<b style="color: red">*</b></label><br>
-                    <input asp-for="dis_mikrocontrollerId" class="form-control" name="dis_mikrocontrollerId" type="text" maxlength="6" id="MainContent_addSender" style=" display: inline;">
-                    <span asp-validation-for="dis_mikrocontrollerId" class="text-danger" ></span>
+                    <label style="font-weight: bold;" for="addSender">No Dispenser<b style="color: red">*</b></label><br>
+                    <input asp-for="dis_no_dispenser" class="form-control" name="dis_no_dispenser" type="text" maxlength="6" id="MainContent_addSender" style=" display: inline;">
+                    <span asp-validation-for="dis_no_dispenser" class="text-danger" ></span>
                     <div class="mb-3"></div>
                 </div>
                 <div class="col-lg-3 form-group">
@@ -59,11 +60,10 @@
                     <span asp-validation-for="dis_lokasi" class="text-danger"></span>
                     <div class="mb-3"></div>
                 </div>
-            </div>
-            <div class="form-group float-right" style="margin-bottom: 15px;">
+                <div class="form-group float-right" style="margin-bottom: 15px;">
                 <a id="MainContent_linkCancelAdd" class="btn btn-secondary" asp-action="Index">Batal</a>
                 <button type="submit" class="btn btn-primary">Simpan</button>
-            </div>
+              </div>
         </form>
     </div>
 </div>
